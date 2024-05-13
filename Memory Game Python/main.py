@@ -94,8 +94,9 @@ while True:
     main = game_elements(user_choice_data)
     process = game_process(user_choice_data)
 
-    choice = input("Do you want to play the game again? (y/n): ")
-    while choice in ["y", "n"]:
+    choice = input("Do you want to play the game again? (y/n): ").lower()
+
+    while choice not in ["y", "n"]:
         print("\n Invalid choice")
         choice = input("Do you want to play the game again? (y/n): ")
     
